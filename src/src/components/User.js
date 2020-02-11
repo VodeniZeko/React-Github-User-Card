@@ -1,6 +1,5 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import "./Users.css";
 
 class User extends React.Component {
   render() {
@@ -25,15 +24,10 @@ class User extends React.Component {
             <span>name:</span> {user.name}
           </Card.Title>
           <Card.Text>
-            <p>
-              {" "}
-              <span>followed by</span> {user.followers} users
-            </p>
+            <span>followed by</span> {user.followers} users
           </Card.Text>
           <Card.Text>
-            <p>
-              <span>following</span> {user.following} users
-            </p>
+            <span>following</span> {user.following} users
           </Card.Text>
         </Card.Body>
         <Card.Footer>
