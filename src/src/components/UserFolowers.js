@@ -3,6 +3,7 @@ import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 
 class UserFolowers extends React.Component {
   render() {
+    const follower = this.props.follower;
     return (
       <Card
         style={{
@@ -14,9 +15,12 @@ class UserFolowers extends React.Component {
           lineHeight: "1.2rem"
         }}
       >
-        <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+        <Card.Img style={{ width: "13rem" }} src={follower.avatar_url} />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
+          <Card.Title>
+            <span>login:</span>
+            {follower.login}
+          </Card.Title>
           <Card.Text>
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
