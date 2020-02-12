@@ -28,7 +28,6 @@ class App extends React.Component {
       .then(([res1, res2]) => {
         const user = res1.data;
         const followers = res2.data;
-        console.log(followers);
         this.setState({ user, followers });
       })
       .catch(err => {
@@ -56,7 +55,6 @@ class App extends React.Component {
   };
 
   render() {
-    console.log(this.state.newUserName);
     return (
       <div>
         <User user={this.state.user} />
